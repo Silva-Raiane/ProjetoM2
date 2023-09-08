@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniProjeto M2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./src/css/header.css">
+    <link rel="stylesheet" href="./src/css/main.css">    
+    <link rel="stylesheet" href="./src/css/login.css">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="input">
+              <input type="text" id="pesquisa" placeholder="Digite para pesquisar"><button id="btnPesquisar"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <img class="login" onclick="login()" src="./src/img/user_456212.png" alt="">
+        </nav>
+        <aside class="sidebar">
+            <ul class="modulos">
+                <li>
+                    <a href="">
+                        <i class="fas fa-user"></i>
+                        <span>Funcionários</span>
+                    </a>
+                </li>
+                <li id="abrirSobre"><a href="#">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Sobre</span>
+                    </a>
+                </li>
+                <li id="abrirDialogAjuda">
+                    <a href="#" >
+                        <i class="fa-solid fa-question"></i>
+                        <span>Ajuda</span>
+                    </a>
+                </li>
+                <li id="logout">
+                    <a href="#">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+    </header>
+    <main class="main" >
+    <section class="Table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Função</th>
+                  <th>Idade</th>
+                  <th>Salário</th>
+                  <th class="acao">Editar</th>
+                  <th class="acao">Excluir</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr></tr>
+              </tbody>
+            </table>
+
+            <button onclick="openModal()" id="incluir">Incluir</i></button>
+            
+            <div class="modal-container">
+                <div class="modal">
+                  <form>
+                    <label for="name">Nome</label>
+                    <input required autocomplete="off" id="name" type="text"/>
+            
+                    <label for="funcao">Função</label>
+                    <input required autocomplete="off" id="funcao" type="text" />
+
+                    <label for="idade">Idade</label>
+                    <input required autocomplete="off" id="idade" type="number" min="18" max="80" />
+            
+                    <label for="salario">Salário</label>
+                    <input required autocomplete="off" id="salario" type="number"  />
+                    <button id="btnSalvar" type="submit">Salvar</button>
+                  </form>
+                </div>
+              </div>
+    </section>
+    <dialog id="modalSobre">
+      <h2>Sobre o projeto...</h2>
+      <p>Este projeto foi desenvolvido com o uso de HTML, CSS & Javascript. O objetivo deste projeto era criar uma página de cadastro usando os seguintes requisitos: </p>
+      <p>
+        <ul>
+        <li>Listar os dados cadastrados;</li>
+        <li>Cadastrar um novo dado;</li>
+        <li>Editar um dado cadastrado;</li>
+        <li>Deletar um dado cadastrado</li>
+        <li>Sem erros de sintaxe</li>
+      </ul>
+        </p>
+        <p>Este projeto de site foi pensado e desenvolvido com muito carinho, espero que você tenha uma ótima experiência!</p>
+      <button id="fecharSobre">Fechar</button>
+    </dialog>
+    <dialog id="modalAjuda">
+      <h2>Aba ajuda</h2>
+      <p>Bem-vindo! guiaremos você na utilização deste site!</p>
+      <p>Para adicionar um novo colaborador clique no botão "incluir" e preencha as informações solicitadas e para salvar clique no botão "salvar".</p>
+      <p>Para editar ou excluir basta clicar nos icones de editar (📝) ou lixeira (🗑️) no final da linha de cada cadastro adicionado.</p>
+      <p>Muitos cadastros e não achar o colaborador desejado? Basta buscar na barra de pesquisa o nome ou função.😉</p>
+      <p>No canto esquerdo da tela temos nossa sidebar com os módulos de Funcionários, Sobre, Ajuda e Logout.</p>
+      <p>Chegamos ao fim da nossa tour, tenha uma ótima experiência!</p>
+      <button id="fecharAjuda">Fechar</button>
+    </dialog>
+    </main>
+    <script src="./src/js/script.js"></script>
+    <script src="./src/js/login.js"></script>
+</body>
+</html>

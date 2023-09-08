@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <main id="container">
+        <form id="login_form">
+            <div id="form_header">
+                <h1>Login</h1>
+               <button id="btn-mode"><i id="mode-icon" class="fa-solid fa-moon"></i></button> 
+            </div>
+
+            <div id="social_media">
+                <a href="https://www.facebook.com/"><img src="./img/icons8-facebook-48.png" alt="facebook"></a>
+                <a href="https://accounts.google.com/Login?hl=pt-BR"><img src="./img/icons8-google-logo-48.png" alt="Gmail"></a>
+                <a href="https://www.github.com"><img src="./img/icons8-github-48.png" alt="GitHub"></a>
+                <a href="https://br.linkedin.com/"><img src="./img/icons8-linkedin-48.png" alt="Linkedin"></a>
+            </div>
+            <div id="input">
+                <div class="input-box">
+                    <label for="name">
+                        Name
+                        <div class="input-field">
+                            <i class="fa-solid fa-user"></i>
+                            <input required type="text" autocomplete="off" id="name" name="name">
+                        </div>
+                    </label>
+                </div>
+                <div class="input-box">
+                    <label for="email">
+                        E-mail
+                        <div class="input-field">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input required type="email" autocomplete="off" id="email" name="email">
+                        </div>
+                    </label>
+                </div>
+                <div class="input-box">
+                    <label for="password">
+                        Password
+                        <div class="input-field">
+                            <i class="fa-solid fa-key"></i>
+                            <input required type="password" id="password" name="password">
+                        </div>
+                    </label>
+                    <div class="forgot-password">
+                        <a href="#">Esqueceu sua senha?</a>
+                    </div>
+                </div>
+            </div>
+            <button id="login_button" class="voltarBtn">Login</button>
+        </form>
+    </main>
+    <script src="./js/login.js"></script>
+</body>
+</html>
